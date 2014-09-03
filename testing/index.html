@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>This is my n/a website</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.2.0/sandstone/bootstrap.min.css" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" />
+    </head>
+
+    <body>
+        <script type="text/javascript">
+            var menu = [{"name": "Google", "link": "https://www.google.com"}];
+
+            menu.forEach(function (v) {
+                document.write("<a target='_blank' href='"+v.link+"'>"+v.name+"</a> ");
+            });
+        </script>
+
+        <!-- Load JavaScript after page loads faster -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js" ></script>
+        <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        <script type="text/javascript">$('[data-toggle="tooltip"]').tooltip();</script>
+    </body>
+</html>
