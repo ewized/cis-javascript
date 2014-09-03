@@ -1,0 +1,12 @@
+# Mac
+.DS_Store
+._*
+
+# Cache files for sublime text
+*.tmlanguage.cache
+*.tmPreferences.cache
+*.stTheme.cache
+
+# Workspace files are user-specific
+*.sublime-workspace
+*.sublime-project
