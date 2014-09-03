@@ -22,9 +22,11 @@
       <script src="modernizr-1.5.js" type="text/javascript"></script>
       <script src="spam.js" type="text/javascript"></script>
       <script type="text/javascript">
+        /** Show the email by reversing name and ext then print out the link */
         function showEM(name, ext) {
             name = stringReverse(name);
             ext = stringReverse(ext);
+            // create a simple var for ez acess
             var mail = name + "@" + ext;
 
             document.write("<a href='mailto:" + mail + "'>" + mail + "</a>");
