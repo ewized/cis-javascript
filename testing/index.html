@@ -65,6 +65,18 @@
             </div>
         </div>
 
+        <div class="panel panel-default">
+            <div class="panel-heading">jQuery getJSON</div>
+            <div class="panel-body">
+                <script type="text/javascript">
+                    $.getJSON('http://anyorigin.com/dev/get?url=https%3A//api.year4000.net/&callback=?', function(data){
+                        $('#output').html(data.contents);
+                    });
+                </script>
+                <div id="output"></div>
+            </div>
+        </div>
+
 
         <!-- Load JavaScript after page loads faster -->
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js" ></script>
