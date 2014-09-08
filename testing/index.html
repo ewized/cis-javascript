@@ -9,13 +9,31 @@
     </head>
 
     <body>
-        <script type="text/javascript">
-            var menu = [{"name": "Google", "link": "https://www.google.com"}];
+        <div class="navbar navbar-default">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">N/A</a>
+            </div>
+            <div class="navbar-collapse collapse navbar-responsive-collapse">
+                <ul class="nav navbar-nav">
+                    <script type="text/javascript">
+                        var menu = [
+                            {"name": "Google", "link": "https://www.google.com"},
+                            {"name": "Year4000", "link": "https://www.year4000.net"}
+                        ];
 
-            menu.forEach(function (v) {
-                document.write("<a target='_blank' href='"+v.link+"'>"+v.name+"</a> ");
-            });
-        </script>
+                        menu.forEach(function (v) {
+                            document.write("<li><a target='_blank' href='"+v.link+"'>"+v.name+"</a></li>");
+                        });
+                    </script>
+                </ul>
+            </div>
+        </div>
+
 
         <!-- Load JavaScript after page loads faster -->
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js" ></script>
