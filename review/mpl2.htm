@@ -22,8 +22,20 @@
       <script src="modernizr-1.5.js" type="text/javascript"></script>
       <script src="random.js" type="text/javascript"></script>
       <script type="text/javascript">
+        var MAX_IMG = 9;
+
+        /** Quick method that will display the captcha where needed */
         function displayCaptcha() {
-          document.write(null);
+          showImg();
+          showImg();
+          showImg();
+          showImg();
+          showImg();
+        }
+
+        /** Show the img tag with the random elements */
+        function showImg() {
+          document.write("<img src='" + randomInteger(MAX_IMG) + ".png' />");
         }
       </script>
 
