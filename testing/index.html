@@ -42,7 +42,26 @@
         <div class="panel panel-default">
             <div class="panel-heading">Javascript OOP</div>
             <div class="panel-body">
+                <script type="text/javascript">
+                    // Assign OOP to the global name space
+                    var OOP = OOP || {};
 
+                    // sub name space
+                    OOP.helloWorld = {};
+
+                    // Constructor
+                    var User = function() {
+                        this.blah = "BLAH";
+                    }
+
+                    // This is a function in side the User class
+                    User.prototype.hello = function() {
+                        document.write("Hello this is a function in a class: " + this.blah);
+                    };
+
+                    new User().hello();
+
+                </script>
             </div>
         </div>
 
