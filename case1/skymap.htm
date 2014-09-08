@@ -21,14 +21,8 @@
       <title>SkyWeb: The Planisphere</title>
       <script src="modernizr-1.5.js" type="text/javascript"></script>
       <script src="datetime.js" type="text/javascript"></script>
-      <script type="text/javascript">
-
-      </script>
-
 
       <link href="skyweb.css" rel="stylesheet" type="text/css" />
-
-
 
    </head>
 
@@ -37,10 +31,14 @@
       <header><img src="skyweb.jpg" alt="SkyWeb" /></header>
 
       <div id="maps">
-         <img id="sky" src="sky0.jpg" alt="" />
+         <script type="text/javascript">
+            document.write("<img id='sky' src='sky" + getMap() + ".jpg' alt='' />");
+         </script>
          <img id="mask" src="mask.gif" alt="" />
          <div id="datetime">
-            <script type="text/javascript">document.write(showDateTime());</script>
+            <script type="text/javascript">
+               document.write(showDateTime());
+            </script>
         </div>
       </div>
 
