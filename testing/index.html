@@ -69,14 +69,21 @@
 
         <div class="panel panel-default">
             <div class="panel-heading">jQuery getJSON</div>
-            <div class="panel-body">
+            <pre class="panel-body">
                 <script type="text/javascript">
-                    $.getJSON('http://anyorigin.com/dev/get?url=https%3A//api.year4000.net/&callback=?', function(data){
-                        $('#output').html(data.contents);
+                    jQuery.ajax({
+                        type: 'GET',
+                        url: 'https://api.year4000.net/servers/',
+                        dataType: 'json',
+                        success: function(data) {
+                            //document.write(JSON.stringify(data, null, "   "));
+                            var name = data["Hub 01"].name;
+                            $("#cont").append(String(name));
+                        }
                     });
                 </script>
-                <div id="output"></div>
-            </div>
+                <div id="cont"></div>
+            </pre>
         </div>
 
 
