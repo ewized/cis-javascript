@@ -1,0 +1,143 @@
+/*
+   New Perspectives on HTML and CSS
+   Additional Cases
+   Case Problem 1
+
+   Young Notes Base Style Sheet
+
+   Author:           
+   Date:             
+   Filename:         ystyles.css
+   Supporting Files: 
+
+*/
+
+
+/* Display HTML5 structural elements as blocks */
+
+article, aside, figure, figcaption, footer, hgroup, header, 
+section, nav {
+   display: block;
+}
+
+
+/* Set the default page element styles */
+
+body {
+   margin: 0px auto;
+   width: 800px;
+}
+
+body * {
+
+   font-family: Verdana, Geneva, sans-serif;
+   font-size: 100%;
+   font-weight: inherit;
+   line-height: 1.2em;
+   margin: 0px;
+   padding: 0px;
+   text-decoration: none;
+   vertical-align: baseline;
+
+}
+
+/* Navigation links */
+
+nav ul {
+   list-style: none;
+   margin-top: 5px;
+}
+
+nav li {
+   float: left; 
+   width: 19%; 
+   text-align: center;
+   border: 1px solid rgb(68, 76, 169); 
+   margin: 5px 2px 15px 2px;
+}
+
+nav li a {
+   display: block; 
+   color: rgb(68, 76, 169); 
+   text-decoration: none;
+   background-color: white;
+}
+
+nav li a:hover {
+   color: white; 
+   background-color: rgb(68,76,169);
+}
+
+
+h1 {
+   font-size: 20px; 
+   font-weight: normal; 
+   letter-spacing: 5px;
+   color: rgb(68, 76, 169); 
+   margin-top: 15px;
+}
+ 
+h2 {
+   font-size: 16px; 
+   font-weight: normal; 
+   letter-spacing: 5px;
+   color: rgb(68, 76, 169); 
+   margin-top: 15px;
+}
+
+p {
+   margin: 7px;
+}
+
+#main {
+   border-top: 2px solid rgb(68, 76, 169); 
+}
+
+#main ul {
+   list-style-type: circle; 
+   margin-left: 50px; 
+   font-size: 12px;
+   margin-top: 15px; 
+   margin-bottom: 15px;
+}
+
+#main ul li {
+   margin-bottom: 10px;
+}
+
+#main ul li strong {
+   font-weight: normal; 
+   color: rgb(68,76,169);
+}
+
+aside {
+   width: 400px;
+   float: right;
+   background-color: ivory;
+   border: 1px solid black;
+   padding: 10px;
+   margin: 5px 0px 20px 20px;
+}
+
+aside img {
+   float: right;
+   margin: 5px;
+}
+
+footer {
+   border-top: 2px solid rgb(68, 76, 169);
+   clear: all;
+   float: left;
+   width: 100%;
+}
+
+address {
+   font-style: normal; 
+   font-size: 10px; 
+   text-align: center;
+   padding: 5px; 
+}
+
+
+/* newly-added styles */
+
