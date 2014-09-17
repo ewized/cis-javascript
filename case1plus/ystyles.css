@@ -141,3 +141,7 @@ address {
 
 /* newly-added styles */
 
+section img {
+   float: right;
+   clear: right;
+}
