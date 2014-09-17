@@ -5,8 +5,8 @@
 
    Young Notes Base Style Sheet
 
-   Author:           
-   Date:             
+   Author:           Joshua Rodriguez
+   Date:             09/17/2014
    Filename:         ystyles.css
    Supporting Files: 
 
@@ -144,4 +144,5 @@ address {
 section img {
    float: right;
    clear: right;
+   margin: 0px;
 }
