@@ -11,3 +11,31 @@
    Supporting Files: none
 
 */
+table {
+	margin: 10px auto !important;
+	width: 400px;
+	font-size: 14px;
+	border: 5px outset rgb(68, 76, 169);
+	border-collapse: collapse;
+}
+
+table th, table td {
+	border: 1px solid #000;
+	margin: 0px;
+	vertical-align: top;
+}
+
+table th {
+	background: ivory;
+}
+
+table td {
+	background: rgb(232, 232, 255);
+	text-align: right;
+	padding: 3px 10px;
+}
+
+table td:first-child {
+	text-align: left;
+	background: #fff;
+}
