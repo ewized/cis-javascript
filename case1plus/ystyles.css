@@ -151,3 +151,8 @@ aside {
    height: 250px;
    overflow: auto;
 }
+
+audio, object, embed {
+   display: block;
+   margin: 15px auto;
+}
