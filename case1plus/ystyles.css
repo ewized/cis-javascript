@@ -146,3 +146,8 @@ section img {
    clear: right;
    margin: 0px;
 }
+
+aside {
+   height: 250px;
+   overflow: auto;
+}
