@@ -13,4 +13,23 @@
 
 */
 
+header {
+	background: #fff url(back.png) no-repeat top right;
+	background-size: contain;
+}
 
+article h1 {
+	text-shadow: 1px 1px 0px #000, 5px 5px 20px rgba(127, 90, 0, 0.7);
+}
+
+.vertical ul {
+	background: linear-gradient(-160deg, rgba(170, 90, 27, 0.7), rgba(16, 77, 61, 0.4), rgba(255, 255, 255, 0.4) 85%);
+}
+
+section {
+	background: url(corner.png) no-repeat bottom left, linear-gradient(90deg, rgba(170, 90, 27, 0.7), rgba(16, 77, 61, 0.7) 2%, rgba(255, 255, 255, 0.1) 5%), linear-gradient(to top, rgba(170, 90, 27, 0.7), rgba(16, 77, 61, 0.7) 2%, rgba(255, 255, 255, 0.1) 5%);
+}
+
+article p:first-letter {
+	color: #678;
+}
