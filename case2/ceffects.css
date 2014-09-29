@@ -30,6 +30,20 @@ section {
 	background: url(corner.png) no-repeat bottom left, linear-gradient(90deg, rgba(170, 90, 27, 0.7), rgba(16, 77, 61, 0.7) 2%, rgba(255, 255, 255, 0.1) 5%), linear-gradient(to top, rgba(170, 90, 27, 0.7), rgba(16, 77, 61, 0.7) 2%, rgba(255, 255, 255, 0.1) 5%);
 }
 
-article p:first-letter {
-	color: #678;
+article p:first-of-type:first-letter {
+	color: rgb(170, 90, 27);
+  font-size: 400%;
+  font-family: times;
+  float: left;
+  margin: 15px 5px 5px 0px;
+}
+
+aside {
+  float: right;
+  font-size: 12px;
+  width: 180px;
+  margin: 10px;
+  padding: 5px;
+  border: 1px solid rgb(127, 90, 0);
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.6), inset 5px 5px 20px rgba(127, 90, 0, 0.6);
 }

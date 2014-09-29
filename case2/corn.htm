@@ -24,6 +24,7 @@
 
       <title>Cornucopia Online</title>
       <script src="modernizr-1.5.js"></script>
+      <script src="tday.js"></script>
 
       <link href="cbase.css" rel="stylesheet" type="text/css"  />
       <link href="ceffects.css" rel="stylesheet" type="text/css"  />
@@ -98,6 +99,14 @@
 
          <article>      
             <h1>Welcome</h1>
+
+            <aside>
+              Today is<br />
+              <script type="text/javascript">document.write(showDate());</script>.
+              <br /><br />There are
+              <script type="text/javascript">document.write(daysToThanksgiving());</script>
+              days until Thanksgiving.
+            </aside> 
 
             <p>Cornucopia began as a small poultry
                shop in rural Connecticut. Once famous only locally for the quality
