@@ -12,3 +12,48 @@
 
 */
 
+/* page style */
+
+@page {
+	size: 8.5in 11in portrait;
+	margin: 0.3in;
+}
+
+/* hide the display style */
+
+header, nav, footer {
+	display: none;
+}
+
+/* article style */
+
+article h1 {
+	font-size: 18pt;
+	font-weight: bold;
+	margin: 0in 0in 0.2in 0in;
+}
+
+article h2 {
+	font-size: 16pt;
+	font-weight: bold;
+	margin: 0.2in 0in 0.2in 0in;
+}
+
+article p {
+	font-size: 14pt;
+	margin: 0.1in;
+}
+
+article ul {
+	font-size: 12pt;
+	list-style-type: disc;
+	margin-left: 0.3in;
+	page-break-inside: avoid;
+}
+
+article ol {
+	font-size: 12pt;
+	list-style-type: decimal;
+	margin-left: 0.3in;
+	page-break-inside: avoid;
+}

@@ -12,3 +12,36 @@
 
 */
 
+header img, nav, footer, p {
+	display: none;
+}
+
+header {
+	width: 100%;
+	height: 80px;
+	background: contain url(cornlogo.jpg) no-repeat;
+}
+
+article h1 {
+	font-size: 16px;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+article h2 {
+	font-size: 14px;
+	font-weight: bold;
+	margin: 10px 0px 10px 0px;
+}
+
+article ul {
+	font-size: 10px;
+	margin-left: 20px;
+	list-style-type: disc;
+}
+
+article ul {
+	font-size: 10px;
+	margin-left: 20px;
+	list-style-type: decimal;
+}
