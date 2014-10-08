@@ -1,0 +1,87 @@
+<!--
+	name: Joshua Rodriguez
+	date: Oct 6 2014
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Climbing School | Form</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<style type="text/css">
+		body {
+			background: #eee url("background4.png") no-repeat top left;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<img src="chlogo.png" />
+		<nav>
+			<ul>
+				<li><a href="home.htm">Home</a></li>
+				<li><a href="lessons.htm">Lessons</a></li>
+				<li><a href="staff.htm">Staff</a></li>
+				<li><a href="tours.htm">Tours</a></li>
+				<li class="active"><a href="form.htm">Form</a></li>
+				<li><a href="aboutus.htm">About Us</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<section>
+		<article>
+			<h3>Form</h3>
+			<img class="left" src="home.png" />
+			<form>
+				<fieldset>
+					<legend>Survay</legend>
+
+					<div>
+						<label for="name">Name:</label>
+						<input name="name" type="text" placeholder="First Last" required />
+					</div>
+
+					<div>
+						<label for="email">Email:</label>
+						<input name="email" type="email" placeholder="user@example.com" required />
+					</div>
+
+					<div>
+						<label for="found">Found Us:</label>
+						<input name="found" type="text" placeholder="Where did you find us at?" />
+					</div>
+
+					<div>
+						<label for="experience">Experience:</label>
+						<textarea name="experience"></textarea>
+					</div>
+
+					<div>
+						<label for="interest">Interest:</label>
+						<textarea name="interest"></textarea>
+					</div>
+
+					<div>
+						<label for="comments">Comments:</label>
+						<textarea name="comments"></textarea>
+					</div>
+
+					<div>
+						<label for="sub">Subscribe to Mailing list:</label>
+						<input name="sub" type="checkbox" />
+					</div>
+
+					<div>
+						<input type="submit" name="Submit"/>
+						<input type="reset" name="Reset"/>
+					</div>
+				</fieldset>
+			</form>
+		</article>
+	</section>
+
+	<footer>
+		Copyright &copy; 2014 Climbing School
+	</footer>
+</body>
+</html>
