@@ -20,15 +20,16 @@ function showTime(dateObject) {
         thisHour = dateObject.getHours();
 
         var ap;
-        if (thisHour > 12) {
-            thisHour = thisHour - 12;
+        if (thisHour >= 12) {
             ap = "p.m."
-        }
-        else {
+            thisHour = thisHour - 12;
+
             if (thisHour == 0) {
                 thisHour = 12;
             }
 
+        }
+        else {
             ap = "a.m.";
         }
 
