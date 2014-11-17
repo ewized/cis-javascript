@@ -51,12 +51,13 @@
 
                     // Constructor
                     var User = function() {
-                        this.blah = "BLAH";
+                        blah = "BLAH";
+                        date = new Date();
                     }
 
                     // This is a function in side the User class
                     User.prototype.hello = function() {
-                        document.write("Hello this is a function in a class: " + this.blah);
+                        document.write("Hello this is a function in a class: " + date);
                     };
 
                     new User().hello();
@@ -69,8 +70,8 @@
             <div class="panel-heading">jQuery getJSON</div>
             <div class="panel-body">
                 <script type="text/javascript">
-                    $.getJSON('http://anyorigin.com/dev/get?url=https%3A//api.year4000.net/&callback=?', function(data){
-                        $('#output').html(data.contents);
+                    $.getJSON('https://api.year4000.net/servers/&callback=?', function(data){
+                        $('#output').append(data.contents);
                     });
                 </script>
                 <div id="output"></div>
