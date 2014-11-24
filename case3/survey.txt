@@ -1,0 +1,50 @@
+Survey Form
+
+Contact us today for more information about Cliff Hangers and to schedule a tour. Required information is indicated by an asterisk (*). 
+
+
+
+Personal Information
+====================
+
+Name*              _______________________________
+
+E-mail*            _______________________________
+
+Where did you hear about us?
+(select all that apply)
+
+> Internet
+> Magazine
+> Newspaper
+> Word of mouth
+> Other
+
+How many years have you been climbing? _______
+
+Climbing interest 
+
+> Beginner skills
+> Intermediate skills
+> Advanced skills
+> Aid climbing
+> Ice climbing
+
+
+I'm interested in:
+
+> Lessons only
+> Tours only
+> Both tours and lessons
+
+
+Tell us about your climbing goals
+
+____________________________________
+____________________________________
+____________________________________
+____________________________________
+____________________________________
+
+
+[] Please add me to the Cliff Hangers e-mail list.

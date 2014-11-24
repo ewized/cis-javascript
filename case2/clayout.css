@@ -1,0 +1,151 @@
+/*
+   New Perspectives on HTML and CSS
+   Additional Cases
+   Case Problem 2
+
+  Cornucopia Online Layout Style Sheet
+
+   Filename:         clayout.css
+   Supporting Files: 
+
+*/
+
+/* Layout styles for desktop screen display */
+
+
+
+/* Body styles */
+
+body {
+   margin: 0px auto;
+   width: 800px;
+}
+
+
+/* Horizontal navigation list styles */
+
+nav.horizontal ul {
+   list-style-type: none; 
+   text-align: center; 
+   width: 100%;
+}
+
+nav.horizontal ul li {
+   float: left; 
+   width: 12.5%; 
+   font-size: 12px; 
+   text-align: center;
+}
+
+nav.horizontal ul li a {
+   display: block; 
+   width: 100%; 
+   text-decoration: none; 
+   color: rgb(173, 89, 28);
+   border: 1px solid rgb(173, 89, 28);
+}
+
+nav.horizontal ul li a:hover {
+   color: white; 
+   background-color: rgb(173, 89, 28);
+}
+
+
+
+/* Vertical navigation list styles */
+
+
+
+nav.vertical ul {
+   clear: left; 
+   float: right; 
+   width: 230px; 
+   font-size: 13px;
+   list-style-type: none;
+}
+
+nav.vertical ul li {
+   margin-left: 20px;
+}
+
+nav.vertical ul li.sub {
+   text-indent: 20px;
+}
+
+nav.vertical ul li.newgroup {
+   margin-top: 25px; 
+   border-top: 1px solid black;
+}
+
+nav.vertical ul a {
+   text-decoration: none; 
+   color: black;
+   display: block; 
+   margin: 3px 0px;
+   width: 100%; 
+}
+
+nav.vertical ul a:hover {
+   color: black; 
+   background-color: rgb(224, 224, 213); 
+}
+
+
+
+/* Article styles */
+
+article {
+   width: 570px;
+   padding-bottom: 20px;
+}
+
+article h1 {
+   font-weight: normal; 
+   font-size: 32px; 
+   letter-spacing: 10px;
+   color: rgb(173, 89, 28); 
+   margin: 5px 0px 5px 30px;
+}
+
+article h2 {
+   font-weight: normal; 
+   font-size: 18px; 
+   letter-spacing: 5px;
+   color: rgb(173, 89, 28); 
+   margin: 5px 0px 5px 30px;
+}
+
+
+article p {
+   margin: 15px 10px 15px 30px;
+}
+
+
+article ul {
+   list-style-type: disc; 
+   margin-left: 60px; 
+   font-size: 10px;
+}
+
+article li {
+   line-height: 1.5em;
+   margin-right: 15px;
+}
+
+article ol {
+   margin-left: 60px; 
+   font-size: 10px;
+}
+
+
+address {
+   border-top: 1px solid rgb(171, 90, 27);
+   font-style: normal; 
+   font-size: 10px; 
+   text-align: center; 
+   padding-bottom: 10px;
+}
+
+
+
+

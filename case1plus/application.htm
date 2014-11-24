@@ -21,9 +21,10 @@
 
       <title>Young Notes Application</title>
       <script src="modernizr-1.5.js"></script>
+      <script src="formsubmit.js"></script>
 
       <link href="ystyles.css" rel="stylesheet" type="text/css"  />
-
+      <link href="fstyles.css" rel="stylesheet" type="text/css"  />
    </head>
 
    <body>
@@ -45,6 +46,73 @@
       <section id="main">
          <h1>Application</h1>
 
+         <form id="interestform" name="interestform" action="http://www.youngnotesschool.com/cgi-bin/interest">
+            <fieldset id="contactFields">
+               <legend> Student Information</legend>
+               <label for="firstname">First Name</label>
+               <input type="text" name="fName" id="firstname" required />
+
+               <label for="lastname">Last Name</label>
+               <input type="text" name="lName" id="lastname" required />
+
+               <label for="street">Street Address</label>
+               <input type="text" name="street" id="street" required />
+
+               <label for="city">City</label>
+               <input type="text" name="city" id="city" required />
+
+               <label for="state">State</label>
+               <input type="text" name="state" value="Texas" id="state" required />
+
+               <label for="zip">Postal Code</label>
+               <input type="text" name="zip" id="zip" placeholder="nnnnn(-nnnn)" pattern="^\d{5}(\-\d{4})?$" required />
+
+               <label for="phone">Phone</label>
+               <input name="phone" id="phone" type="tel" placeholder="(nnn)nnn-nnnn" pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$" required />
+
+               <label for="email">Email</label>
+               <input name="email" id="email" type="email" />
+            </fieldset>
+             
+             
+            <fieldset id="otherFields">
+               <legend> Other Information</legend>
+
+               <label for="pcontact">Primary Contact:</label>
+               <input name="pcontact" id="pcontact" type="text" placeholder="Parent or Guardian" />
+
+               <label for="ctype">Relation to Student</label>
+               <select name="ctype" id="ctype">
+                  <option value="parent"> Parent</option>
+                  <option value="guardian"> Guardian</option>
+               </select>
+                
+               <label> Musical Interest </br> (select all the apply) </label>
+               <select name="interest" id="interest" size="9" multiple="multiple">
+                  <option value="brass">brass</option>
+                  <option value="drums">drums and percussion</option>
+                  <option value="guitar">guitar and bass</option>
+                  <option value="piano">piano</option>
+                  <option value="strings">strings</option>
+                  <option value="voice">voice</option>
+                  <option value="woodwinds">woodwinds</option>
+               </select>
+                
+               <label> Years of Previous Practice </label>
+               <input name ="years" id="years" type="number" value="0" min="0" max="12" step="1">
+            </fieldset>
+
+            <div>
+               <input type="checkbox" id="call" name="call" value="yes">
+               <label id="call" for="call">Please contact me for a "Get to Know You" visit.</label>
+
+               <br />
+
+               <input class="cbut" type="submit" value="Submit Information">
+               <input class="cbut2" type="reset" value="Cancel">
+            </div>
+          
+         </form>
       
       </section>
 
