@@ -3,8 +3,8 @@
    Tutorial 13
    Tutorial Case
 
-   Author: 
-   Date:   
+   Author: Joshua Rodriguez
+   Date:   11 / 23 / 2014
 
    Function List
    =============
@@ -48,8 +48,134 @@
 	
 */
 
+window.onload = function() {
+   init()
+};
 
 
+var YELLOW = "rgb(255, 255, 85)";
+var BLUE =  "rgb(0, 170, 170)";
+var GREEN = "rgb(85, 255, 85)";
+var RED = "rgb(63, 21, 21)";
+var PINK = "rgb(63, 21, 53)";
+
+var puzzles = [
+   {"name": "puzzle1Hint", "rating": "puzzle1Rating", "puzzle": "puzzle1"},
+   {"name": "puzzle2Hint", "rating": "puzzle2Rating", "puzzle": "puzzle2"},
+   {"name": "puzzle3Hint", "rating": "puzzle3Rating", "puzzle": "puzzle3"}
+];
+
+function init() {
+   document.getElementById("peek").onclick = peak;
+   document.getElementById("solve").onclick = showSolution;
+   var elements = document.getElementsByClassName("puzzles");
+
+   for (i = 0 ; i < elements.length ; i++) {
+      elements[i].name = i;
+      elements[i].onclick = function() {
+         swapPuzzle(this.name);
+      };
+   }
+
+   swapPuzzle(0);
+}
+
+function swapPuzzle(index) {
+   //var index = this.name;
+
+   document.getElementById("hint").innerHTML = eval(puzzles[index].name);
+   document.getElementById("rating").innerHTML = eval(puzzles[index].rating);
+   document.getElementById("puzzle").innerHTML = drawGrid(eval(puzzles[index].puzzle));
+
+   setupPuzzle();
+}
+
+function setupPuzzle() {
+   var BOXES = document.querySelectorAll("#hanjieGrid td.marked, #hanjieGrid td.empty");
+
+   for (i = 0 ; i < BOXES.length ; i++) {
+      BOXES[i].style.backgroundColor = YELLOW;
+      BOXES[i].onclick = changeBackground;
+   }
+}
+
+function changeBackground() {
+  switch (this.style.backgroundColor) {
+     case YELLOW:
+        this.style.backgroundColor = BLUE;
+        break;
+     case BLUE:
+        this.style.backgroundColor = GREEN;
+        break;
+     case GREEN:
+        this.style.backgroundColor = YELLOW;
+        break;
+  }
+
+   checkSolution();
+}
+
+function peak() {
+   var BOXES = document.querySelectorAll("#hanjieGrid td.marked, #hanjieGrid td.empty");
+
+   for (i = 0 ; i < BOXES.length ; i++) {
+      if (BOXES[i].style.backgroundColor == "") break;
+      if (BOXES[i].style.backgroundColor == YELLOW) continue;
+
+      if (BOXES[i].className == "marked" && BOXES[i].style.backgroundColor != BLUE) {
+         BOXES[i].style.backgroundColor = RED;
+      }
+
+      if (BOXES[i].className == "empty" && BOXES[i].style.backgroundColor != GREEN) {
+         BOXES[i].style.backgroundColor = PINK;
+      }
+   }
+
+   setTimeout(unpeak, 1000);
+}
+
+function unpeak() {
+   var BOXES = document.querySelectorAll("#hanjieGrid td.marked, #hanjieGrid td.empty");
+
+   for (i = 0 ; i < BOXES.length ; i++) {
+      if (BOXES[i].style.backgroundColor == RED) {
+         BOXES[i].style.backgroundColor = GREEN;
+      }
+
+      if (BOXES[i].style.backgroundColor == PINK) {
+         BOXES[i].style.backgroundColor = BLUE;
+      }
+   }
+}
+
+function showSolution() {
+   var BOXES = document.querySelectorAll("#hanjieGrid td.marked, #hanjieGrid td.empty");
+
+   for (i = 0 ; i < BOXES.length ; i++) {
+      BOXES[i].style.backgroundColor = "";
+   }
+}
+
+function checkSolution() {
+   var BOXES = document.querySelectorAll("#hanjieGrid td.marked, #hanjieGrid td.empty");
+   var marked = true;
+   var empty = true;
+
+   for (i = 0 ; i < BOXES.length ; i++) {
+      if (BOXES[i].className == "marked" && BOXES[i].style.backgroundColor != BLUE) {
+         marked = false;
+      }
+
+      if (BOXES[i].className == "empty" && BOXES[i].style.backgroundColor != GREEN) {
+         empty = false;
+      }
+   }
+
+   if (marked && empty) {
+      showSolution();
+      alert("You win!");
+   }
+}
 
 function drawGrid(puzzle) {
 
