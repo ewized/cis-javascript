@@ -1,0 +1,70 @@
+/*
+   New Perspectives on HTML5, CSS, and JavaScript
+   Tutorial 14
+   Tutorial Case
+   Filename: largetext.css
+
+   This file contains styles used in the usconst.htm file to displaying
+   only the contents of historic document in a large text font
+*/
+
+
+
+/* Styles to be used for large text displays */
+
+
+
+/* Hide page elements that will not be printed */
+
+header, nav, footer, aside {
+   display: none;
+}
+
+body {
+   margin: 25px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+   font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* Large Print Styles */
+
+h1 {
+   font-size: 32px;
+}
+
+h2 {
+   font-size: 28px;
+}
+
+h3 {
+   font-size: 26px;
+}
+
+p {
+   font-size: 22px;
+}
+
+
+
+/* Styles for the style sheet switcher */
+
+#styleOptions {
+   margin-top: 10px;
+}
+
+#styleOptions button {
+   font-family: 'Times Roman', Times, serif;
+   font-size: 16px;
+   border: 1px solid rgb(191, 191, 191);
+   font-style: italic;
+   background-color: white;
+   margin: 5px 10px 0px 0px;
+   cursor: pointer;
+   padding: 5px;
+}
+#styleOptions button:hover {
+   background-color: rgb(231, 231, 231);
+}

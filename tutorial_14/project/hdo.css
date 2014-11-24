@@ -1,0 +1,221 @@
+/*
+   New Perspectives on HTML5, CSS, and JavaScript
+   Tutorial 14
+   Tutorial Case
+
+   Historic Documents Online Style Sheet
+
+   Filename:         hdo.css
+   Supporting Files: 
+
+*/
+
+
+/* Display HTML5 structural elements as blocks */
+
+article, aside, figure, figcaption, footer, hgroup, header, 
+section, nav {
+   display: block;
+}
+
+
+/* Set the default page element styles */
+
+body {
+   margin: 0px;
+}
+
+body * {
+   font-size: 100%;
+   font-weight: inherit;
+   line-height: 1.2em;
+   margin: 0px;
+   padding: 0px;
+   text-decoration: none;
+   vertical-align: baseline;
+
+}
+
+/* Main Section Styles */
+section#main {
+   background-color: white;
+   border-right: 1px solid black;
+   border-left: 1px solid black;
+   margin: 0px auto;
+   width: 900px;
+}
+
+
+/* Header styles */
+   
+#main > header {
+   background: url(hdologo.png) no-repeat;
+   width: 885px;
+   height: 80px;
+   color: white;
+   padding: 15px 15px 0px 0px;
+   text-align: right;
+}
+
+
+
+/* Navigation lists */
+
+
+nav.horizontal {
+   width: 100%;
+   position: relative;
+   top: -25px;
+}
+
+nav.horizontal ul {
+   margin: 0px;
+   list-style-type: none;
+}
+
+nav.horizontal ul li {
+   float: left;
+   font-size: 16px;
+   height: 20px;
+   line-height: 20px;
+   margin-right: 20px;
+   padding-right: 5px;
+   border-right: 1px solid white;
+}
+
+nav.horizontal ul li:first-of-type {
+   margin-left: 15px;
+}
+
+nav.horizontal ul li:last-of-type {
+   border-right: none;
+}
+
+nav.horizontal ul li a {
+   font-family: 'Trebuchet MS', Helvetica, sans-serif;
+   color: rgb(241, 241, 241);
+   color: rgba(255, 255, 255, 0.8);
+   text-shadow: black 2px 1px 0px;
+}
+
+nav.horizontal ul li a:hover {
+   background-color: rgb(188, 221, 255);
+   background-color: rgba(255, 255, 255, 0.2);
+
+}
+
+
+/* Aside styles */
+
+aside {
+   clear: left;
+   width: 240px;
+   float: left;
+   margin: 0px 0px 0px 15px;
+}
+
+/* Main h1 heading style */
+
+#main > h1 {
+   float: left;
+   margin: 0px 20px;
+   width: 590px;
+   font-size: 30px;
+   font-weight: bold;
+   font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+   letter-spacing: 2px;
+}
+
+
+/* Main Article Styles */
+
+article {
+   font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+   float: left;
+   margin: 0px 35px 0px 20px;
+   width: 575px;
+}
+
+article h1 {
+   font-size: 22px;
+   font-weight: bold;
+   margin: 25px 0px 10px;
+   border-top: 1px solid rgb(101, 101, 101);
+}
+
+article h2 {
+   font-size: 18px;
+   font-weight: bold;
+   margin: 15px 0px 10px;
+}
+
+article h3 {
+   font-size: 16px;
+   font-weight: bold;
+   margin: 5px 0px 5px 25px;
+}
+
+article p {
+   font-size: 14px;
+   margin: 5px 0px 8px 25px;
+   text-align: justify;
+}
+
+article p:first-of-type {
+   font-size: 16px;
+}
+
+article p:first-of-type:first-line {
+   font-variant: small-caps;
+}
+
+article p:first-of-type:first-letter {
+   float: left; 
+   font-size: 300%;
+   font-family: 'Times New Roman', Times, serif; 
+   line-height: 0.8; 
+   margin-right: 5px
+}
+
+
+/* Page footer styles */
+
+footer {
+   border-top: 1px solid black;
+   border-bottom: 1px solid black;
+   clear: left;
+   font-size: 0.8em;
+   height: 30px;
+   text-indent: 15px;
+   padding-top: 10px;
+}
+
+footer span {
+   float: right;
+   margin-right: 10px;
+}
+
+footer span a {
+   color: black;
+}
+
+
+/* Styles for the style sheet switcher */
+
+#styleOptions {
+   margin-top: 10px;
+}
+
+#styleOptions button {
+   font-family: 'Times Roman', Times, serif;
+   font-size: 16px;
+   border: 1px solid rgb(191, 191, 191);
+   font-style: italic;
+   background-color: white;
+   margin: 5px 10px 0px 0px;
+   cursor: pointer;
+   padding: 5px;
+}
+#styleOptions button:hover {
+   background-color: rgb(231, 231, 231);
+}

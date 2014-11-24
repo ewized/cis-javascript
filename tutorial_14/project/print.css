@@ -1,0 +1,63 @@
+/*
+   New Perspectives on HTML5, CSS, and JavaScript
+   Tutorial 14
+   Tutorial Case
+   Filename: print.css
+
+   This file contains styles used in the usconst.htm file to displaying
+   only the contents of historic document suitable for printing
+
+*/
+
+@page {
+   size: 8.5in 11in portrait;
+   margin: 1in;
+}
+
+
+/* Styles to be used for print displays */
+
+
+
+/* Hide page elements that will not be printed */
+
+header, nav, footer, aside {
+   display: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+   font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* Styles for the page breaks */
+
+p {
+   page-break-inside: avoid;
+}
+
+h1 {
+   page-break-before: always;
+}
+
+
+
+/* Styles for the style sheet switcher */
+
+#styleOptions {
+   margin-top: 10px;
+}
+
+#styleOptions button {
+   font-family: 'Times Roman', Times, serif;
+   font-size: 16px;
+   border: 1px solid rgb(191, 191, 191);
+   font-style: italic;
+   background-color: white;
+   margin: 5px 10px 0px 0px;
+   cursor: pointer;
+   padding: 5px;
+}
+#styleOptions button:hover {
+   background-color: rgb(231, 231, 231);
+}

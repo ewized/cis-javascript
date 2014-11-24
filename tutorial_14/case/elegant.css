@@ -1,0 +1,143 @@
+/*
+   New Perspectives on HTML5, CSS, and JavaScript
+   Tutorial 14
+   Case Problem 1
+
+   Elegant Style Sheet
+
+   Filename:         elegant.css
+   Supporting Files: 
+
+*/
+
+
+/* Set the default page element styles */
+
+body {
+   background: url(elegant_back.png) repeat;
+   font-family: Verdana, Geneva, sans-serif;
+}
+
+
+
+/* Main Section Styles */
+section#main {
+   background: rgb(59, 136, 197) url(elegant.png) no-repeat left 120px;
+   -moz-box-shadow: rgb(43, 87, 129) 0px 0px 50px ;
+   webkit-box-shadow: rgb(43, 87, 129) 0px 0px 50px ;
+   box-shadow: rgb(43, 87, 129) 0px 0px 50px; 
+}
+
+
+/* Header styles */
+   
+#main > header {
+   background: url(nalogo.png) no-repeat left top;
+}
+
+#main > header > a {
+   color: white;
+   display: inline-block;
+   margin: 10px;
+   font-size: 12px;
+}
+
+#main > header > a:hover {
+   color: rgb(227, 227, 163);
+}
+
+
+/* Navigation lists */
+
+
+nav.links {
+   clear: left;
+   width: 800px;
+   position: relative;
+   top: -35px;
+   margin-left: 100px;
+}
+
+nav.links ul {
+   margin: 0px;
+   list-style-type: none;
+}
+
+nav.links ul li {
+   float: left;
+   font-size: 18px;
+   height: 20px;
+   line-height: 20px;
+   margin-right: 20px;
+   padding-right: 5px;
+   border-right: 1px solid white;
+}
+
+nav.links ul li:first-of-type {
+   margin-left: 15px;
+}
+
+nav.links ul li:last-of-type {
+   border-right: none;
+}
+
+nav.links ul li a {
+   font-family: 'Trebuchet MS', Helvetica, sans-serif;
+   font-family: 'Times New Roman', Times, serif;
+   color: rgb(241, 241, 241);
+   color: rgba(255, 255, 255, 0.8);
+   text-shadow: black 2px 1px 0px;
+}
+
+nav.links ul li a:hover {
+   background-color: rgb(188, 221, 255);
+   background-color: rgba(255, 255, 255, 0.2);
+
+}
+
+
+
+/* Article Styles */
+
+article {
+   position: absolute;
+   color: rgb(102, 115, 126);
+   top: 135px;
+   left: 640px;
+   width: 240px;
+   font-size: 18px;
+   font-family: 'Times New Roman', Times, serif;
+}
+
+article p {
+   margin: 0px 0px 10px 0px;
+   text-shadow: rgb(255, 255, 255) 3px 3px 8px;
+}
+
+   
+address {
+   color: rgb(227, 227, 163);
+}
+
+#thumbnails {
+   position: absolute;
+   left: 0px;
+   top: 670px;
+}
+
+
+
+/* Page footer styles */
+
+footer {
+   color: white;
+   font-size: 0.8em;
+}
+
+footer span a {
+   color: white;
+}
+
+footer span a:hover {
+   color: rgb(227, 227, 163);
+}

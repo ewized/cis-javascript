@@ -1,0 +1,49 @@
+/*
+   New Perspectives on HTML5, CSS, and JavaScript
+   Tutorial 14
+   Review Assigment
+
+   Historic Documents Keywords Style Sheet
+
+   Filename:         keywords.css
+   Supporting Files: 
+
+*/
+
+
+#keywords {
+   float: right; 
+   clear: right; 
+   font-size: 18px; 
+   font-family: 'Trebuchet MS', Arial, Verdana, sans-serif; 
+   margin: 30px; 
+   width: 300px; 
+   border: 2px solid rgb(28,0,127); 
+   background-color: ivory;
+
+}
+
+#keywords h1 {
+   font-size: 18px; 
+   letter-spacing: 5px; 
+   line-height: 20px;
+   text-align: center; 
+   padding: 5px 0px; 
+   color: white; 
+   background-color: rgb(28,0,127);
+}
+
+#keywords ul {
+   margin-left: 10px; 
+   padding-left: 0px; 
+   margin-top: 0px; 
+   margin-bottom: 5px;
+}
+
+#keywords li {
+   list-style-type: none;
+}
+
+#keywords a {
+   color: rgb(28, 0, 127);
+}
