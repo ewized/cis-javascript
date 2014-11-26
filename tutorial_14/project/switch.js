@@ -3,10 +3,10 @@
    Tutorial 14
    Tutorial Case
 
-   Author: 
-   Date:   
+   Author: Joshua Rodriguez
+   Date:   1/24/2014
 
-   Filename: switchStyle.js
+ Filename: switchStyle.js
 
 
    Functions List:
