@@ -39,77 +39,94 @@
 
 */
 
+var Cal = function(date) {
+   day = date == null ? new Date() : date;
+   leapYear = (day.getFullYear() % 4 == 0) && (day.getFullYear() % 100 != 0) || (day.getFullYear() % 400 == 0);
+   DAYS = [31, (leapYear ? 29 : 28), 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+   MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+   WEEKS = ["S", "M", "T", "W", "T", "F", "S"];
+};
+
+Cal.prototype.printTable = function() {
+   day.setDate(1);
+   var first = true, count = 0;
 
 
-function writeMonth(calendarDay, currentTime) {
    document.write("<table class='monthly_table'>");
-   writeMonthTitle(calendarDay);
-   writeDayNames()
-   writeMonthDays(calendarDay, currentTime);
+   document.write("<tbody>");
+
+
+   // Header Month and Year
+   document.write("<tr class='monthly_title'>");
+   document.write("<th colspan='7'><a href='" + MONTHS[day.getMonth()] + ".htm'>" + MONTHS[day.getMonth()] + "</a></th>");
+   document.write("</tr>");
+
+   // Header Week Names
+   document.write("<tr>");
+   WEEKS.forEach(function(v) {
+      document.write("<th class='monthly_weekdays'>" + v + "</th>");
+   });
+   document.write("</tr>");
+
+   // Calender Table
+   for (var i = 1 - day.getDay(); i <= 42 ; i++) {
+      count++;
+
+      if (first) {
+         document.write("<tr>");
+         first = !first;
+      }
+
+      document.write(day.getMonth() == new Date().getMonth() && i == (new Date()).getDate() ? "<td class='monthly_dates' id='today'>": "<td class='monthly_dates'>");
+      document.write(i < 1 || i > DAYS[day.getMonth()] ? "&nbsp;" : i);
+      document.write("</td>");
+
+      if (count % 7 == 0) {
+         document.write("</tr>");
+         first = !first;
+      }
+
+      // Break the loop if no need to print more dates
+      if (i >= DAYS[day.getMonth()] && count % 7 == 0 && count > 40 ) {
+         break;
+      }
+   }
+
+   document.write("</tbody>");
    document.write("</table>");
-}
+};
 
-function writeMonthTitle(calendarDay) {
-   var monthName = ["January", "February", "March", "April", "May", 
-   "June", "July", "August", "September", "October", "November", "December"];
+Cal.printCal = function() {
+   document.write("<table id='yearly_table'>");
 
-   var thisMonth=calendarDay.getMonth();
+   var header = "<thead>";
+   header += "<th colspan='4' id='yearly_title'>"+new Date().getFullYear()+"</th>";
+   header += "</thead><tbody>";
 
-   document.write("<tr>");
-   document.write("<th class='monthly_title' colspan='7'>");
-   document.write(monthName[thisMonth]);
-   document.write("</th>");
-   document.write("</tr>");
-}
+   document.write(header);
+   var first = true;
 
-function writeDayNames() {
-   var dayName = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
-   document.write("<tr>");
-   for (var i=0;i<dayName.length;i++) {
-      document.write("<th class='monthly_weekdays'>"+dayName[i]+"</th>");
-   }
-   document.write("</tr>");
-}
+   for (var i = 1; i < 13; i++) {
+      if (first) {
+         document.write("<tr>");
+         first = !first;
+      }
+      document.write("<td>");
+      var date = new Date();
+      date.setMonth(i-1);
+      //document.write(date);
+      new Cal(date).printTable();
+      document.write("</td>");
 
-function daysInMonth(calendarDay) {
-   var thisYear = calendarDay.getFullYear();
-   var thisMonth = calendarDay.getMonth();
-   var dayCount = [31,28,31,30,31,30,31,31,30,31,30,31];
-   if ((thisYear % 4 == 0)&&((thisYear % 100 !=0) || (thisYear % 400 == 0))) {
-         dayCount[1] = 29;
-   }
-   return dayCount[thisMonth];
-}
+      if (i % 4 == 0) {
+         document.write("</tr>");
+         first = !first;
+      }
 
-function writeMonthDays(calendarDay, currentTime) {
-
-   var weekDay = calendarDay.getDay();
-
-   document.write("<tr>");
-   for (var i=0; i < weekDay; i++) {
-      document.write("<td></td>");
    }
 
-   var totalDays = daysInMonth(calendarDay);
-   for (var dayCount=1; dayCount<=totalDays; dayCount++) {
-
-      calendarDay.setDate(dayCount);
-      weekDay = calendarDay.getDay();
-      writeDay(weekDay, dayCount, calendarDay, currentTime);
-   }
-   
-   document.write("</tr>");
-}
-
-function writeDay(weekDay, dayCount, calendarDay, currentTime) {
-   if (weekDay == 0) document.write("<tr>");
-   if (calendarDay.getTime() == currentTime) {
-      document.write("<td class='monthly_dates' id='today'>"+dayCount+"</td>");
-   } else {
-      document.write("<td class='monthly_dates'>"+dayCount+"</td>");
-   }
-   if (weekDay == 6) document.write("</tr>");
-}
+   document.write("</tbody></table>");
+};
 
 
 
