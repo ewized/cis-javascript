@@ -8,8 +8,8 @@
       Review Assignment
 
       The Federalist Papers: No. 10
-      Author: 
-      Date:   
+      Author: Joshua Rodriguez
+      Date:   Dec 8 2014
 
       Filename:         fed10.htm
       Supporting files: fedpaper.css, hdolog.png, keywords.css,
@@ -21,10 +21,12 @@
       <meta charset="UTF-8" />
       <title>The Federalist Papers: No. 10</title>
       <script src="modernizr-1.5.js"></script>
+      <script src="key.js"></script>
+      <script src="styles.js"></script>
 
-      <link type="text/css" href="fedpaper.css" rel="stylesheet" />
-      <link type="text/css" title="Print" href="print.css" 
-            rel="alternate stylesheet" />
+      <link type="text/css" href="keywords.css" rel="stylesheet" />
+      <link type="text/css" title="Web" href="fedpaper.css" rel="stylesheet" />
+      <link type="text/css" title="Print" href="print.css" rel="alternate stylesheet" disabled/>
 
 
    </head>
@@ -52,8 +54,8 @@
          <article id="doc">
 
             <div id="styleOptions">
-               <button>Web view</button>
-               <button>Print view</button>
+               <button onclick="changeStyle('Web')">Web view</button>
+               <button onclick="changeStyle('Print')">Print view</button>
             </div>
 
             <hgroup>
