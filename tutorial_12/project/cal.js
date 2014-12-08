@@ -89,9 +89,9 @@ function writeCalDays(calendarDay) {
 
       if (weekDay == 0) document.write("<tr>");
       if (calendarDay.getTime() == new Date().getTime()) {
-         document.write("<td class='calendar_dates' id='calendar_today'>"+dayCount+"</td>");
+         document.write("<td class='calendar_dates' id='calendar_today'>"+dayCount+dayEvent[dayCount]+"</td>");
       } else {
-         document.write("<td class='calendar_dates'>"+dayCount+"</td>");
+         document.write("<td class='calendar_dates'>"+dayCount+dayEvent[dayCount]+"</td>");
       }
       if (weekDay == 6) document.write("</tr>");   }
 
