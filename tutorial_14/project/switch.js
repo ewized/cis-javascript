@@ -20,3 +20,13 @@
 */
 
 
+function changeStyle(sheet) {
+    var links = document.getElementsByTagName("link");
+
+    for (var i = 0 ; i < links.length ; i++) {
+        if ((links[i].rel == "stylesheet" || links[i].rel == "alternate stylesheet") && links[i].hasAttribute("title")) {
+            links[i].disabled = links[i].title != sheet;
+        }
+
+    }
+}

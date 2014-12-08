@@ -23,7 +23,9 @@
       <script src="switch.js"></script>
       <script src="toc.js"></script>
 
-      <link type="text/css" href="hdo.css" rel="stylesheet" />
+      <link type="text/css" href="hdo.css" rel="stylesheet" title="Web" />
+      <link type="text/css" href="print.css" rel="alternate stylesheet" title="Print" disabled />
+      <link type="text/css" href="largetext.css" rel="alternate stylesheet" title="Large Text" disabled />
       <link type="text/css" href="toc.css" rel="stylesheet" />
 
 
@@ -54,6 +56,12 @@
          <h1>The Constitution of the United States</h1>
   
          <article id="doc">
+
+            <div id="styleOptions">
+               <button onclick="changeStyle('Web')">Web</button>
+               <button onclick="changeStyle('Print')">Print</button>
+               <button onclick="changeStyle('Large Text')">Large Text</button>
+            </div>
 
             <h1>Preamble</h1>
             <p>We the People of the United States, in Order 
